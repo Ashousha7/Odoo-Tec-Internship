@@ -1,2 +1,1 @@
-from . import models
-from . import scripts
+from . import my_model
