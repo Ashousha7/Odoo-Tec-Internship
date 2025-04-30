@@ -1,0 +1,20 @@
+{
+    'name': 'Task1',
+    'version': '1.0',
+    'summary': 'Simple CRUD example',
+    'description': 'A basic module for managing task items.',
+    'category': 'Productivity',
+    'author': 'You',
+    'website': 'https://example.com',
+    'license': 'LGPL-3',
+    'depends': ['base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/my_model_views.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'module_type': 'custom',
+    'post_init_hook': 'fix_views',
+}
