@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_sentiment" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.sentiment</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Add suggested team below actual team -->
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="suggested_team_id" readonly="1"/>
+            </xpath>
+
+            <!-- Sentiment not shown in UI (only logged to terminal) -->
+            <!-- You can optionally add it to debug tab if you ever need it -->
+
+        </field>
+    </record>
+</odoo>
